@@ -12,6 +12,9 @@
     </head>
 
     <body>
+        <div class="stars">
+            
+        </div>
         <aside class = "sidebar">
             <a href = "index.html"> Home </a>
             <a href = "projects.html"> Projects </a>
@@ -35,9 +38,25 @@
             <p>
                 Welcome to my portfolio. I am currently UBC Arts student planning on majoring in CS.<br>
                 <b>Contact information:</b><br>
-                ocherdenekhurelsukh@gmail.com | <a href="www.linkedin.com/in/och-erdene"> LinkedIn</a> | <a href = "https://github.com/OchErdene">GitHub</a> | Richmond BC<br>
+                ocherdenekhurelsukh@gmail.com | <a href="https://www.linkedin.com/in/och-erdene/"> LinkedIn</a> | <a href = "https://github.com/OchErdene">GitHub</a> | Richmond BC<br>
             </p>
         </main>
+
+        <script>
+            function generateStars(count) {
+                let stars = '';
+                for (let i = 0; i < count; i++) {
+                    const x = Math.floor(Math.random() * 2000);
+                    const y = Math.floor(Math.random() * 2000);
+                    stars += `${x}px ${y}px #fff,`;
+                }
+                return stars.slice(0, -1);
+            }
+
+            const style = document.createElement('style');
+            style.innerHTML = `.stars::before { box-shadow: ${generateStars(300)}; }`;
+            document.head.appendChild(style);
+        </script>
     </body>
 
 </html>
