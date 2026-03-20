@@ -12,25 +12,32 @@
     </head>
 
     <body>
-        <h1>Och-Erdene Khurelsukh</h1>
-        <h3 id = "h3"></h3>
-        <script>
-            function updateClock() {
-                var date = new Date();
-                document.getElementById("h3").innerHTML = date;
-            }
+        <aside class = "sidebar">
+            <a href = "index.html"> Home </a>
+            <a href = "projects.html"> Projects </a>
+            <a href = "experience.html"> Experience </a>
+        </aside>
+        <main class="content">
+            <h1>Och-Erdene Khurelsukh</h1>
+            <h3 id = "h3"></h3>
+            <script>
+                function updateClock() {
+                    var date = new Date();
+                    document.getElementById("h3").innerHTML = date;
+                }
 
-            updateClock();
+                updateClock();
 
-            setInterval(updateClock, 1000)
-            
-        </script>
+                setInterval(updateClock, 1000)
+                
+            </script>
 
-        <p>
-            Welcome to my portfolio. I am currently UBC Arts student planning on majoring in CS.<br>
-            <b>Contact information:</b><br>
-            ocherdenekhurelsukh@gmail.com | <a href="www.linkedin.com/in/och-erdene"> LinkedIn</a> | <a href = "https://github.com/OchErdene">GitHub</a> | Richmond BC<br>
-        </p>
+            <p>
+                Welcome to my portfolio. I am currently UBC Arts student planning on majoring in CS.<br>
+                <b>Contact information:</b><br>
+                ocherdenekhurelsukh@gmail.com | <a href="www.linkedin.com/in/och-erdene"> LinkedIn</a> | <a href = "https://github.com/OchErdene">GitHub</a> | Richmond BC<br>
+            </p>
+        </main>
     </body>
 
 </html>
