@@ -6,19 +6,30 @@
         <meta name = "viewport" content="width = device-width, initial-scale = 1.0">
         <meta name = "describtion" content="Och's personal portfolio">
         
-        <link rel = "css/style.css">
+        <link rel = "stylesheet" href="css/style.css">
         <link rel = "icon" href = "favicon.ico">
         <link rel = "preconnect" href = "https://fonts.googleapis.com">
     </head>
 
     <body>
         <h1>Och-Erdene Khurelsukh</h1>
-        <h2>UBC Faculty of Arts Student</h2>
+        <h3 id = "h3"></h3>
+        <script>
+            function updateClock() {
+                var date = new Date();
+                document.getElementById("h3").innerHTML = date;
+            }
+
+            updateClock();
+
+            setInterval(updateClock, 1000)
+            
+        </script>
 
         <p>
             Welcome to my portfolio. I am currently UBC Arts student planning on majoring in CS.<br>
             <b>Contact information:</b><br>
-            ocherdenekhurelsukh@gmail.com | www.linkedin.com/in/och-erdene | https://github.com/OchErdene | Richmond BC<br>
+            ocherdenekhurelsukh@gmail.com | <a href="www.linkedin.com/in/och-erdene"> LinkedIn</a> | <a href = "https://github.com/OchErdene">GitHub</a> | Richmond BC<br>
         </p>
     </body>
 
