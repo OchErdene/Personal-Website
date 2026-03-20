@@ -18,11 +18,16 @@ body {
     width: 200px;
     position: fixed;
     top: 0;
-    left: 0;
+    left: -200px;
     background-color: #121212;
     padding-top: 20px;
     color: white;
     overflow-x: hidden;
+    transition: 0.3s;
+}
+
+.sidebar.open {
+    left: 0;
 }
 
 .sidebar a {
@@ -39,8 +44,32 @@ body {
     transition: 0.3s;
 }
 
+.menu-btn {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 999;
+    background-color: #121212;
+    color: white;
+    border: none;
+    border-radius: 50%; /* makes it a circle */
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.menu-btn.open {
+    left: 215px;
+}
+
+.menu-btn:hover {
+    background-color: #303030;
+    transition: 0.3s;
+}
+
 .content {
-    margin-left: 200px;
+    margin-left: 20px;
     padding: 20px;
     flex-grow: 1;
     color: white;

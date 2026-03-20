@@ -4,7 +4,7 @@
 
         <meta charset = "UTF-8">
         <meta name = "viewport" content="width = device-width, initial-scale = 1.0">
-        <meta name = "describtion" content="Och's personal portfolio">
+        <meta name = "description" content="Och's personal portfolio">
         
         <link rel = "stylesheet" href="css/style.css">
         <link rel = "icon" href = "favicon.ico">
@@ -12,28 +12,25 @@
     </head>
 
     <body>
+        <!-- Stars in the background -->
         <div class="stars">
             
         </div>
-        <aside class = "sidebar">
+
+        <!-- Sidebar and hamburger button -->
+        <button class = "menu-btn" id = "menu-btn" onclick = "toggleSidebar()">☰</button>
+
+        <aside class = "sidebar" id = "sidebar">
             <a href = "index.html"> Home </a>
             <a href = "projects.html"> Projects </a>
             <a href = "experience.html"> Experience </a>
         </aside>
+
+        <!-- main content -->
+
         <main class="content">
             <h1>Och-Erdene Khurelsukh</h1>
             <h3 id = "h3"></h3>
-            <script>
-                function updateClock() {
-                    var date = new Date();
-                    document.getElementById("h3").innerHTML = date;
-                }
-
-                updateClock();
-
-                setInterval(updateClock, 1000)
-                
-            </script>
 
             <p>
                 Welcome to my portfolio. I am currently UBC Arts student planning on majoring in CS.<br>
@@ -42,20 +39,18 @@
             </p>
         </main>
 
-        <script>
-            function generateStars(count) {
-                let stars = '';
-                for (let i = 0; i < count; i++) {
-                    const x = Math.floor(Math.random() * 2000);
-                    const y = Math.floor(Math.random() * 2000);
-                    stars += `${x}px ${y}px #fff,`;
-                }
-                return stars.slice(0, -1);
-            }
+        <script src="js/functions.js"></script>
 
+        <script>
             const style = document.createElement('style');
             style.innerHTML = `.stars::before { box-shadow: ${generateStars(300)}; }`;
             document.head.appendChild(style);
+        </script>
+
+        <script>
+            updateClock();
+            setInterval(updateClock, 1000)
+                
         </script>
     </body>
 
