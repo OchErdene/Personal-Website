@@ -1,76 +1,44 @@
-h1 {
-    color: whitesmoke;
-    font-size: 32px;
-    text-align: center;
-}
 
 h3 {
-    text-align:  center;
     color: white;
 }
 
 body {
-    background-color: black;
-}
-
-.sidebar {
-    height: 100vh;
-    width: 200px;
-    position: fixed;
-    top: 0;
-    left: -200px;
-    background-color: #121212;
-    padding-top: 20px;
-    color: white;
+    background-color: #060B18;
     overflow-x: hidden;
-    transition: 0.3s;
 }
 
-.sidebar.open {
-    left: 0;
+
+.bar {
+    position: fixed; 
+    top: -1px; 
+    left: -1px;
+    width: 100%; 
+    height: 60px;
+    color: whitesmoke;
+    font-size: 15px;
+    background: #303030;
+    border: 1px solid white;
 }
 
-.sidebar a {
-    padding: 15px;
+.bar a {
     text-decoration: none;
-    font-size: 18px;
-    color: white;
-    display: block;
+    color:white;
 }
 
-.sidebar a:hover {
-    color: #b3b3b3;
-    background-color: #303030;
-    transition: 0.3s;
-}
-
-.menu-btn {
+.subbar {
     position: fixed;
-    top: 15px;
-    left: 15px;
-    z-index: 999;
-    background-color: #121212;
-    color: white;
-    border: none;
-    border-radius: 50%; /* makes it a circle */
-    width: 45px;
-    height: 45px;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.menu-btn.open {
-    left: 215px;
-}
-
-.menu-btn:hover {
-    background-color: #303030;
-    transition: 0.3s;
+    display: flex;
+    right: 0; 
+    text-decoration: none; 
+    top: 20px;
+    width: 300px;
+    justify-content: space-evenly;
 }
 
 .content {
     margin-left: 20px;
-    padding: 20px;
+    padding: 80px 20px 20px 20px;
     flex-grow: 1;
     color: white;
 }
@@ -81,11 +49,11 @@ body {
 }
 
 .stars {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 1000px;
     background: black;
     z-index: -1;
 }
@@ -95,12 +63,44 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 3px;
-    height: 3px;
-    animation: twinkle 10s ease-in-out infinite alternate;
+    width: 2px;
+    height: 2px;
+    animation: twinkle 5s ease-in-out infinite alternate;
+}
+
+.sun {
+    position: absolute;
+    top: 500;
+    right: 100;
+    width: 100px; 
+    height: 100px; 
+    border-radius:50%; 
+    background: rgb(255, 255, 255);
+}
+
+.ellipse {
+    position: absolute;
+    border: 1px solid #b3b3b3;
+    border-radius: 50%;
+    top: -200;
+    left: -100;
+    rotate: 80deg;
+    width: 200px; 
+    height: 500px; 
+}
+
+.bigellipse {
+    position: absolute;
+    border: 1px solid #b3b3b3;
+    border-radius: 50%;
+    top: -400;
+    left: -300;
+    rotate: 80deg;
+    width: 400px; 
+    height: 1000px; 
 }
 
 @keyframes twinkle {
     from { opacity: 1;}
-    to { opacity: 0.5; }
+    to { opacity: 0.3; }
 }
