@@ -1,24 +1,23 @@
 
-h3 {
-    color: white;
-}
-
 body {
-    background-color: #060B18;
+    background-color: #0a0a0a;
     overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+    color: white;
 }
 
 
 .bar {
-    position: fixed; 
-    top: -1px; 
-    left: -1px;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%; 
     height: 60px;
     color: whitesmoke;
     font-size: 15px;
-    background: #303030;
-    border: 1px solid white;
+    background: #1f1f1f;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .bar a {
@@ -27,7 +26,7 @@ body {
 }
 
 .subbar {
-    position: fixed;
+    position: absolute;
     display: flex;
     right: 0; 
     text-decoration: none; 
@@ -38,7 +37,7 @@ body {
 
 .content {
     margin-left: 20px;
-    padding: 80px 20px 20px 20px;
+    padding: 100px 20px 20px 20px;
     flex-grow: 1;
     color: white;
 }
@@ -46,6 +45,29 @@ body {
 .content a {
     text-decoration: none;
     color: white;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    padding: 7px 20px;
+    display: inline-block;
+    background: black;
+}
+
+.content a:hover {
+    background: #1f1f1f;
+}
+
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.project {
+    border: 1px solid rgba(112, 112, 112, 0.267);
+    height: 300px;
+    width: 200px;
+    border-radius: 20px;
+    background: rgb(20, 20, 20);
 }
 
 .stars {
@@ -53,8 +75,8 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 1000px;
-    background: black;
+    min-height: 85vh;
+    background: #020408;
     z-index: -1;
 }
 
@@ -70,8 +92,8 @@ body {
 
 .sun {
     position: absolute;
-    top: 500;
-    right: 100;
+    top: 500px;
+    right: 100px;
     width: 100px; 
     height: 100px; 
     border-radius:50%; 
@@ -82,22 +104,24 @@ body {
     position: absolute;
     border: 1px solid #b3b3b3;
     border-radius: 50%;
-    top: -200;
-    left: -100;
+    top: -200px;
+    left: -100px;
     rotate: 80deg;
     width: 200px; 
     height: 500px; 
+    pointer-events: none;
 }
 
 .bigellipse {
     position: absolute;
     border: 1px solid #b3b3b3;
     border-radius: 50%;
-    top: -400;
-    left: -300;
+    top: -400px;
+    left: -300px;
     rotate: 80deg;
     width: 400px; 
     height: 1000px; 
+    pointer-events: none;
 }
 
 @keyframes twinkle {
