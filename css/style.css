@@ -63,11 +63,47 @@ body {
 }
 
 .project {
+    text-decoration: none;
+    color: white;
     border: 1px solid rgba(112, 112, 112, 0.267);
-    height: 300px;
+    height: auto;
     width: 200px;
     border-radius: 20px;
     background: rgb(20, 20, 20);
+    transition: width 0.5s ease, height 0.5s ease, background 0.1s ease-out;
+}
+
+.project .skills {
+    padding: 0 15px;
+    margin-top: auto;
+    margin-bottom: 15px;
+}
+
+.project .skills p {
+    margin: 0;
+}
+
+.project p {
+    padding-left: 15px;
+    text-align: center;
+    width: 180px;
+}
+
+.project h3 {
+    text-align: center;
+}
+
+.project:hover {
+    height: auto;
+    width: 210px;
+    background: #020408;
+}
+
+.disclaimer {
+    color: #b8b8b886;
+    padding-left: 5px;
+    padding-bottom: 15px;
+    text-align: center;
 }
 
 .stars {
@@ -158,6 +194,9 @@ body {
     display: flex;
     flex-direction: column;
 }
+.description p {
+    padding-right: 20px;
+}
 
 .skills {
     display: flex;
@@ -167,7 +206,7 @@ body {
     font-size: small;
 }
 
-.skill {
+.skills p {
     border: 1px solid rgba(255, 255, 255, 0.5);
     padding: 10px;
     border-radius: 999px;
